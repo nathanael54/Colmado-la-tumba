@@ -1,0 +1,322 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+  color: #222;
+  margin: 0;
+  padding: 0;
+  transition: background 0.6s;
+}
+
+.login {
+  width: 350px;
+  margin: 80px auto;
+  padding: 32px 28px 24px 28px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.login h1 {
+  color: #ff4e50;
+  margin-bottom: 24px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.login input[type="text"], .login input[type="password"] {
+  width: 100%;
+  height: 44px;
+  margin-bottom: 16px;
+  padding: 0 14px;
+  border: 1.5px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border 0.2s;
+}
+
+.login input[type="text"]:focus, .login input[type="password"]:focus {
+  border: 1.5px solid #ff4e50;
+  outline: none;
+}
+
+.login button[type="submit"] {
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255,78,80,0.08);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.login button[type="submit"]:hover {
+  background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(255,78,80,0.18);
+}
+
+.dashboard {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dashboard header {
+  background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+  border-radius: 12px;
+  padding: 24px 0 16px 0;
+  margin-bottom: 32px;
+  color: #fff;
+  text-align: center;
+}
+
+.dashboard nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dashboard nav ul li {
+  margin: 0;
+}
+
+.dashboard nav a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.dashboard nav a:hover {
+  color: #222;
+}
+
+.dashboard main {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.product-card {
+  background: #f9f9f9;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(255,78,80,0.08);
+  padding: 24px 20px 18px 20px;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.15s;
+  opacity: 0;
+  animation: cardPop 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: var(--card-delay, 0s);
+}
+
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.product-card:hover {
+  box-shadow: 0 12px 36px rgba(255,78,80,0.22);
+  transform: translateY(-8px) scale(1.06) rotate(-1deg);
+}
+
+.product-card h3 {
+  color: #ff4e50;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.product-card .price {
+  color: #f9d423;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.product-card .qty {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.product-card .actions {
+  display: flex;
+  gap: 12px;
+}
+
+.product-card .actions a, .product-card .actions button {
+  background: #ff4e50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.product-card .actions a:hover, .product-card .actions button:hover {
+  background: #f9d423;
+  color: #222;
+}
+
+.productos {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.productos h1 {
+  color: #ff4e50;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.productos table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-bottom: 32px;
+}
+
+.productos th, .productos td {
+  padding: 14px 12px;
+  text-align: left;
+  background: #f9f9f9;
+  border: none;
+  border-radius: 8px;
+}
+
+.productos th {
+  background: #ff4e50;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.productos tr {
+  box-shadow: 0 2px 8px rgba(255,78,80,0.06);
+}
+
+.productos a, .productos button {
+  background: #ff4e50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 6px;
+  transition: background 0.2s;
+}
+
+.productos a:hover, .productos button:hover {
+  background: #f9d423;
+  color: #222;
+}
+
+.productos form {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.productos input[type="text"], .productos input[type="number"] {
+  padding: 10px 12px;
+  border: 1.5px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border 0.2s;
+  width: 180px;
+}
+
+.productos input[type="text"]:focus, .productos input[type="number"]:focus {
+  border: 1.5px solid #ff4e50;
+  outline: none;
+}
+
+.productos button[type="submit"] {
+  background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255,78,80,0.08);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  padding: 10px 24px;
+}
+
+.productos button[type="submit"]:hover {
+  background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+  color: #222;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(255,78,80,0.18);
+}
+
+@media (max-width: 900px) {
+  .dashboard, .productos {
+    max-width: 98vw;
+    padding: 12px;
+  }
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
